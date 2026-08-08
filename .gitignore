@@ -5,6 +5,10 @@ build/
 !**/src/test/**/build/
 .kotlin
 
+### Local application configuration ###
+src/main/resources/application.properties
+src/main/resources/application-dev.properties
+
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml

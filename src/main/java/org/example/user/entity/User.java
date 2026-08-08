@@ -1,21 +1,25 @@
-package org.example.user;
+package org.example.user.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "users")
+@Schema(description = "Información de un usuario")
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(description = "Identificador único", example = "1")
     private Long id;
 
+    @Schema(description = "Nombre del usuario", example = "Luis Sauceda")
     private String name;
 
+    @Schema(description = "Correo electrónico", example = "luis@example.com")
     private String email;
 
-    @jakarta.persistence.Column(name = "created_at")
+    @Schema(description = "Fecha de creación", example = "2026-08-07")
     private String createdAt;
 
     protected User() {
@@ -45,11 +49,11 @@ public class User {
         this.email = email;
     }
 
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
-
     public String getCreatedAt() {
         return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
     }
 }

@@ -24,6 +24,8 @@ dependencies {
     implementation 'dev.langchain4j:langchain4j-open-ai-spring-boot4-starter:1.18.1-beta28'
     runtimeOnly 'org.postgresql:postgresql'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.3'
 }
 
 tasks.named('test') {
