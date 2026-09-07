@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
-@Tag(name = "Usuarios", description = "Operaciones relacionadas con usuarios")
+@Tag(name = "Usuarios", description = "Devuelve todos los usuarios registrados desde PostgreSQL")
 public class UserController {
 
     private final UserService userService;
@@ -28,6 +28,7 @@ public class UserController {
     @Operation(
             summary = "Obtener todos los usuarios",
             description = "Devuelve la lista completa de usuarios registrados"
+
     )
     @ApiResponses({
             @ApiResponse(
