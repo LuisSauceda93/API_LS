@@ -1,0 +1,10 @@
+.git
+.github
+.gradle
+.idea
+src
+build/reports
+build/test-results
+docker-compose.yaml
+.env
+*.log

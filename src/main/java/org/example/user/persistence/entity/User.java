@@ -1,4 +1,4 @@
-package org.example.user.entity;
+package org.example.user.persistence.entity;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;

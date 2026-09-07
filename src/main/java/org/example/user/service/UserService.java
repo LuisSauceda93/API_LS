@@ -1,6 +1,6 @@
 package org.example.user.service;
 
-import org.example.user.entity.User;
+import org.example.user.persistence.entity.User;
 
 import java.util.List;
 
