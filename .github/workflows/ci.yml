@@ -83,6 +83,11 @@ jobs:
       - name: Construir aplicación Spring Boot
         run: ./gradlew bootJar --no-daemon
 
+      - name: Configurar emulación para ARM
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: all
+
       - name: Configurar Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -106,5 +111,6 @@ jobs:
         with:
           context: .
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
