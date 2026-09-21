@@ -25,6 +25,12 @@ public class User {
     protected User() {
     }
 
+    public User(String name, String email, String createdAt) {
+        this.name = name;
+        this.email = email;
+        this.createdAt = createdAt;
+    }
+
     public Long getId() {
         return id;
     }
