@@ -4,6 +4,7 @@ import org.example.user.persistence.entity.User;
 import org.example.user.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -18,5 +19,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> findAll() {
         return userRepository.findAll();
+    }
+
+    @Override
+    public User create(String name, String email) {
+        User user = new User(name, email, LocalDate.now().toString());
+
+        return userRepository.save(user);
     }
 }
